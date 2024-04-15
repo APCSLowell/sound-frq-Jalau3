@@ -42,8 +42,10 @@ public class Sound
     /* to be implemented in part (b) */
     ArrayList <Integer> list = new Arraylist <Integer> ();
     for(int sound:samples){
-      if(sound != 0)
         list.add(sound);
+    }
+    while(list.get(0)==0){
+      list.remove(0);
     }
     samples = new int[list.size()];
     for(int i = 0; i<samples.length(); i++){
